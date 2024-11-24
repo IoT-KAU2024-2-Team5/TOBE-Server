@@ -13,12 +13,16 @@ java {
 
 repositories {
 	mavenCentral()
+	maven { url "https://jitpack.io" }
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
+
+	implementation 'software.amazon.awssdk:dynamodb:2.20.41' // AWS SDK for DynamoDB
+	implementation 'com.github.derjust:spring-data-dynamodb:5.1.0'
 }
 
 tasks.named('test') {

@@ -1,0 +1,8 @@
+spring:
+  main:
+    allow-bean-definition-overriding: true
+
+aws:
+  dynamodb:
+    endpoint: https://dynamodb.ap-northeast-2.amazonaws.com # DynamoDB 엔드포인트
+    region: ap-northeast-2 # AWS 리전
