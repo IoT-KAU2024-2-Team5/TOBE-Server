@@ -4,7 +4,6 @@ import Iot.org.tobePJ.model.IotData;
 import Iot.org.tobePJ.repository.IotRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
 import java.util.Optional;
 
 @Service
