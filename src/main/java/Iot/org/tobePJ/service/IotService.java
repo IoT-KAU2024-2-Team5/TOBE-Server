@@ -4,7 +4,7 @@ import Iot.org.tobePJ.model.IotData;
 import Iot.org.tobePJ.repository.IotRepository;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.Optional;
 
 @Service
 public class IotService {
@@ -15,9 +15,7 @@ public class IotService {
         this.iotRepository = iotRepository;
     }
 
-    public List<IotData> getAllDatas() {
-        return (List<IotData>) iotRepository.findAll();
-    }
+    public Optional<IotData> getDataById(String id) { return iotRepository.findById(id); }
 
     public IotData saveData(IotData data) {
         return iotRepository.save(data);

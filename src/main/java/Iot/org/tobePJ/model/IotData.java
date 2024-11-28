@@ -22,7 +22,7 @@ public class IotData {
     private String humidityUpdatedAt;
 
     @DynamoDBAttribute(attributeName = "led")
-    private Boolean led;
+    private Integer led;
 
     @DynamoDBAttribute(attributeName = "ledUpdatedAt")
     private String ledUpdatedAt;
@@ -38,6 +38,12 @@ public class IotData {
 
     @DynamoDBAttribute(attributeName = "temperatureUpdatedAt")
     private String temperatureUpdatedAt;
+
+    @DynamoDBAttribute(attributeName = "plantName")
+    private String plantName;
+
+    @DynamoDBAttribute(attributeName = "plantNameUpdatedAt")
+    private String plantNameUpdatedAt;
 
     // Getter & Setter
     public String getId() {
@@ -72,11 +78,11 @@ public class IotData {
         this.humidityUpdatedAt = humidityUpdatedAt;
     }
 
-    public Boolean getLed() {
+    public Integer getLed() {
         return led;
     }
 
-    public void setLed(Boolean led) {
+    public void setLed(Integer led) {
         this.led = led;
     }
 
@@ -119,4 +125,21 @@ public class IotData {
     public void setTemperatureUpdatedAt(String temperatureUpdatedAt) {
         this.temperatureUpdatedAt = temperatureUpdatedAt;
     }
+
+    public String getPlantName() {
+        return plantName;
+    }
+
+    public void setPlantName(String plantName) {
+        this.plantName = plantName;
+    }
+
+    public String getPlantNameUpdatedAt() {
+        return plantNameUpdatedAt;
+    }
+
+    public void setPlantNameUpdatedAt(String plantNameUpdatedAt) {
+        this.plantNameUpdatedAt = plantNameUpdatedAt;
+    }
+
 }
