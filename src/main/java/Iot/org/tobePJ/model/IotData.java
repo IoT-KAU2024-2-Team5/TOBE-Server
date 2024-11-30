@@ -33,11 +33,17 @@ public class IotData {
     @DynamoDBAttribute(attributeName = "pumpUpdatedAt")
     private String pumpUpdatedAt;
 
-    @DynamoDBAttribute(attributeName = "temperature")
-    private Integer temperature;
+    @DynamoDBAttribute(attributeName = "brightness")
+    private Integer brightness;
 
-    @DynamoDBAttribute(attributeName = "temperatureUpdatedAt")
-    private String temperatureUpdatedAt;
+    @DynamoDBAttribute(attributeName = "brightnessUpdatedAt")
+    private String brightnessUpdatedAt;
+
+    @DynamoDBAttribute(attributeName = "plantName")
+    private String plantName;
+
+    @DynamoDBAttribute(attributeName = "plantNameUpdatedAt")
+    private String plantNameUpdatedAt;
 
     @DynamoDBAttribute(attributeName = "plantName")
     private String plantName;
@@ -110,20 +116,20 @@ public class IotData {
         this.pumpUpdatedAt = pumpUpdatedAt;
     }
 
-    public Integer getTemperature() {
-        return temperature;
+    public Integer getBrightness() {
+        return brightness;
     }
 
-    public void setTemperature(Integer temperature) {
-        this.temperature = temperature;
+    public void setBrightness(Integer brightness) {
+        this.brightness = brightness;
     }
 
-    public String getTemperatureUpdatedAt() {
-        return temperatureUpdatedAt;
+    public String getBrightnessUpdatedAt() {
+        return brightnessUpdatedAt;
     }
 
-    public void setTemperatureUpdatedAt(String temperatureUpdatedAt) {
-        this.temperatureUpdatedAt = temperatureUpdatedAt;
+    public void setBrightnessUpdatedAt(String brightnessUpdatedAt) {
+        this.brightnessUpdatedAt = brightnessUpdatedAt;
     }
 
     public String getPlantName() {
