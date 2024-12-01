@@ -5,6 +5,7 @@ import Iot.org.tobePJ.service.IotService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
 import java.util.Optional;
 
 @RestController
@@ -17,13 +18,10 @@ public class IotController {
         this.iotService = iotService;
     }
 
-    // 특정 id로 데이터 조회 (Body로 id 전달)
-    @PostMapping("/datas/query")
-    public ResponseEntity<IotData> getDataById(@RequestBody IotData requestData) {
-        String id = requestData.getId(); // Body에서 id 추출
-        Optional<IotData> data = iotService.getDataById(id);
-        return data.map(ResponseEntity::ok)
-                .orElse(ResponseEntity.notFound().build());
+    // 모든 엔티티 조회
+    @GetMapping("/datas")
+    public List<IotData> getAllDatas() {
+        return iotService.getAllDatas();
     }
 
     // 엔티티 생성
