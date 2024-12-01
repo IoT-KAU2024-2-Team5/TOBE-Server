@@ -17,9 +17,10 @@ public class IotController {
         this.iotService = iotService;
     }
 
-    // 특정 id로 데이터 조회 (쿼리스트링 사용)
-    @GetMapping("/datas")
-    public ResponseEntity<IotData> getDataById(@RequestParam String id) {
+    // 특정 id로 데이터 조회 (Body로 id 전달)
+    @PostMapping("/datas/query")
+    public ResponseEntity<IotData> getDataById(@RequestBody IotData requestData) {
+        String id = requestData.getId(); // Body에서 id 추출
         Optional<IotData> data = iotService.getDataById(id);
         return data.map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());

@@ -15,7 +15,10 @@ public class IotService {
         this.iotRepository = iotRepository;
     }
 
-    public Optional<IotData> getDataById(String id) { return iotRepository.findById(id); }
+    // ID로 데이터 조회
+    public Optional<IotData> getDataById(String id) {
+        return iotRepository.findById(id);
+    }
 
     public IotData saveData(IotData data) {
         return iotRepository.save(data);
