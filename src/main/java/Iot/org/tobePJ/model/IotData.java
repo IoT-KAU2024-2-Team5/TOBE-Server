@@ -45,12 +45,6 @@ public class IotData {
     @DynamoDBAttribute(attributeName = "plantNameUpdatedAt")
     private String plantNameUpdatedAt;
 
-    @DynamoDBAttribute(attributeName = "plantName")
-    private String plantName;
-
-    @DynamoDBAttribute(attributeName = "plantNameUpdatedAt")
-    private String plantNameUpdatedAt;
-
     // Getter & Setter
     public String getId() {
         return id;
