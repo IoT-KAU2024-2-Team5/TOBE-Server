@@ -16,9 +16,7 @@ public class IotService {
         this.iotRepository = iotRepository;
     }
 
-    public List<IotData> getAllDatas() {
-        return (List<IotData>) iotRepository.findAll();
-    }
+    public Optional<IotData> getDataById(String id) { return iotRepository.findById(id); }
 
     public IotData saveData(IotData data) {
         return iotRepository.save(data);
